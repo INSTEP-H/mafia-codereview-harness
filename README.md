@@ -1,3 +1,19 @@
+## 컨벤져스에서 쓰는 법 (convengers 브랜치 안내)
+
+코드리뷰를 여섯 단계로 자동으로 돌리는 Claude Code 플러그인입니다. 설계 의도를 쓰고, 평가 기준을 뽑고, PR 본문을 만들고, 리뷰하고, 반영까지 합니다.
+
+1. 이 폴더의 `convengers/skills/` 아래 일곱 폴더를 키트의 `plugins/convengers/skills/` 로 복사합니다.
+2. 리뷰할 프로젝트에 `plugin/docs/code-convention.yaml` 과 `plugin/docs/adr.yaml` 을 복사해 우리 팀 규칙으로 고칩니다.
+3. Claude Code에서 `/convengers:mafia-codereview-auto` 를 칩니다. 산출물은 `.review-artifacts/브랜치이름/` 에 쌓입니다.
+
+주의: 옮긴 스킬 본문 안에서 서로를 부를 때는 원래 짧은 이름(`/update-docs`, `/brief` 같은)을 그대로 씁니다. 키트에서 이름 앞에 붙인 접두어와 안 맞으니, 키트에 넣을 때 본문의 호출 이름을 새 이름으로 맞춰야 바로 돕니다.
+
+키트와 붙이는 자세한 자리는 [`convengers/연결.md`](convengers/연결.md) 에 적었습니다.
+
+원저작: VIBE MAFIA CLUB (https://github.com/vibemafiaclub/mafia-codereview-harness). 라이선스는 원본 README의 License 절(MIT) 그대로입니다. 아래 원문과 저작권 표기는 손대지 않았습니다.
+
+---
+
 # MAFIA Code-Review harness
 
 ![flow.png](./assets/flow.png)
